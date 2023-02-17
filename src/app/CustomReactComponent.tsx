@@ -34,7 +34,11 @@ export const CustomReactComponent: FunctionComponent<IMyComponentProps> = (props
 
   return (
     <div>
-      <div>Props counter: {propsCounter}
+      <h1>Hola mundo React para abajo</h1>
+      <div>
+        <p>Props counter: {propsCounter}</p>
+
+
         <button type="button" onClick={handleClick}>click to increase</button>
       </div>
       <div>State counter: {stateCounter}</div>

@@ -23,6 +23,7 @@ const containerElementName = 'customReactComponentContainer';
   template: `<span #${containerElementName}></span>`,
   // styleUrls: [''],
   encapsulation: ViewEncapsulation.None,
+  standalone: true
 })
 export class CustomReactComponentWrapperComponent implements OnChanges, OnDestroy, AfterViewInit {
   @ViewChild(containerElementName, { static: true }) containerRef!: ElementRef;
@@ -55,7 +56,6 @@ export class CustomReactComponentWrapperComponent implements OnChanges, OnDestro
 
   private render() {
     const { counter } = this;
-
     ReactDOM.render(
       <React.StrictMode>
         <div>
